@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locations | Café Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDV4QrgLcoure_DAuffqgd4rcnDIXNiI4k"></script>
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Menu.html">Menu</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="ContactInfo.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Locations Section -->
+    <section id="locations" class="section">
+        <h2>Locations</h2>
+        <p>We have cafes in multiple locations around the city. Visit us at any of the following spots:</p>
+            <li>123 Main St, City Center</li>
+            <li>456 Oak Rd, Downtown</li>
+            <li>789 Maple Ave, Uptown</li>
+        <div id="map"></div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Our Café</p>
+    </footer>
+
+    <!-- JavaScript for Map -->
+    <script>
+        function initMap() {
+            const mainLocation = { lat: 40.712776, lng: -74.005974 }; // Coordinates for New York City
+            const otherLocations = [
+                { lat: 40.714550, lng: -74.007118, title: "123 Main St, City Center" },
+                { lat: 40.710392, lng: -74.009868, title: "456 Oak Rd, Downtown" },
+                { lat: 40.715917, lng: -74.003689, title: "789 Maple Ave, Uptown" }
+            ];
+
+            // Map initialization
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 14,
+                center: mainLocation,
+            });
+
+            // Main location marker
+            new google.maps.Marker({
+                position: mainLocation,
+                map,
+                title: "Main Café Location",
+                icon: "https://maps.google.com/mapfiles/ms/icons/red-dot.png"
+            });
+
+            // Other locations markers
+            otherLocations.forEach(location => {
+                new google.maps.Marker({
+                    position: { lat: location.lat, lng: location.lng },
+                    map,
+                    title: location.title,
+                    icon: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+                });
+            });
+        }
+
+        // Initialize the map
+        window.onload = initMap;
+    </script>
+</body>
+</html>

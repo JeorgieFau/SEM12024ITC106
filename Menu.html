@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Café Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="menu-page">
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="ContactInfo.html">Contact</a></li>
+            <li><a href="Locations.html">Locations</a></li>
+        </ul>
+    </nav>
+
+    <!-- Submenu for Menu Page -->
+    <div class="submenu">
+        <ul>
+            <li><a href="#" onclick="changeContent('coffee')">Coffee</a></li>
+            <li><a href="#" onclick="changeContent('bread')">Bread</a></li>
+            <li><a href="#" onclick="changeContent('pasta')">Pasta</a></li>
+        </ul>
+    </div>
+
+    <!-- Content Section -->
+    <section id="content-section" class="section">
+        <!-- Coffee Page Text (Visible only on Coffee Page) -->
+        <div id="coffee-intro" class="intro-text" style="display:none;">
+            <h3>Our Café Offerings</h3>
+            <p>Coffee made with passion and care.</p>
+        </div>
+
+        <!-- Coffee Content -->
+        <div id="coffee-content" class="content-box" style="display:none;">
+            <section id="image-boxes" class="section">
+                <div class="image-container">
+                    <!-- Row 1 -->
+                    <div class="image-box">
+                        <img src="Food/coffee/brown sugar shaken espresso.jpg" alt="Coffee Item 1">
+                        <div class="overlay">
+                            <p class="hidden-text">Expertly Shaken Brown Suger Expresso</p>
+                            <a href="#" class="expand-button">₱78</a>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="Food/coffee/Caramel Macchiato.jpg" alt="Coffee Item 2">
+                        <div class="overlay">
+                            <p class="hidden-text">Caramel Macchiato freshly brewed</p>
+                            <a href="#" class="expand-button">₱95</a>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="Food/coffee/Dalgona Coffee.jpg" alt="Coffee Item 3">
+                        <div class="overlay">
+                            <p class="hidden-text"> Wildy popular creamy Dalgona Coffee</p>
+                            <a href="#" class="expand-button">₱89</a>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="image-box">
+                        <img src="Food/coffee/Hazelnut Iced Coffee.jpg" alt="Coffee Item 4">
+                        <div class="overlay">
+                            <p class="hidden-text">Nutty Hazelzut smooth Iced Coffee.</p>
+                            <a href="#" class="expand-button">₱120</a>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="Food/coffee/Iced Mocha Frappuccino.jpg" alt="Coffee Item 5">
+                        <div class="overlay">
+                            <p class="hidden-text">Iced Chocolate Mocha Frappuccino</p>
+                            <a href="#" class="expand-button">₱95</a>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="Food/coffee/Salted Caramel Latte.jpg" alt="Coffee Item 6">
+                        <div class="overlay">
+                            <p class="hidden-text">Sweetly Salted Caramel Latte </p>
+                            <a href="#" class="expand-button">₱80</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Bread Content -->
+        <div id="bread-content" class="content-box" style="display:none;">
+            <h3>Bread</h3>
+            <p>Freshly baked in our finest ovens.</p>
+            <section id="image-boxes" class="section">
+                <div class="image-container">
+                    <!-- Row 1 -->
+                    <div class="image-box">
+                        <img src="Food/Bread/Almond cookies.png" alt="Bread Item 1">
+                        <div class="overlay">
+                            <p class="hidden-text">Freshly baked Almond Cookies.</p>
+                            <a href="#" class="expand-button">₱135</a>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="Food/Bread/Banana bread.png" alt="Bread Item 2">
+                        <div class="overlay">
+                            <p class="hidden-text">Freshly made daily Banana Bread.</p>
+                            <a href="#" class="expand-button">₱100</a>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="Food/Bread/croisant.png" alt="Bread Item 3">
+                        <div class="overlay">
+                            <p class="hidden-text">Classic croissants, crispy and buttery.</p>
+                            <a href="#" class="expand-button">₱135</a>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="image-box">
+                        <img src="Food/Bread/Chocolate Croisant.png" alt="Bread Item 4">
+                        <div class="overlay">
+                            <p class="hidden-text">Classic chocolate croissants, crispy and buttery.</p>
+                            <a href="#" class="expand-button">₱86</a>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="Food/Bread/Oatmeal Pumpink cookies.png" alt="Bread Item 5">
+                        <div class="overlay">
+                            <p class="hidden-text">Soft, chewy, Pumpkin cookies .</p>
+                            <a href="#" class="expand-button">₱89</a>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="Food/Bread/Pandesal Moringa.png" alt="Bread Item 6">
+                        <div class="overlay">
+                            <p class="hidden-text"> Moringabread with a tangy twist.</p>
+                            <a href="#" class="expand-button">₱75</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Pasta Content -->
+        <div id="pasta-content" class="content-box" style="display:none;">
+            <h3>Pasta</h3>
+            <p>Homemade pasta with rich flavors.</p>
+            <section id="image-boxes" class="section">
+                <div class="image-container">
+                    <!-- Row 1 -->
+                    <div class="image-box">
+                        <img src="Food/Pasta/Haitian Spagetti.jpg" alt="Pasta Item 1">
+                        <div class="overlay">
+                            <p class="hidden-text">Classic Haitian Spaghetti with marinara sauce.</p>
+                            <a href="#" class="expand-button">₱135</a>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="Food/Pasta/fettucine alfredo.jpg" alt="Pasta Item 2">
+                        <div class="overlay">
+                            <p class="hidden-text">Creamy Alfredo pasta with chicken.</p>
+                            <a href="#" class="expand-button">₱130</a>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="Food/Pasta/PENNE ELLE VODKA.jpg" alt="Pasta Item 3">
+                        <div class="overlay">
+                            <p class="hidden-text">Penne with spicy arrabbiata sauce.</p>
+                            <a href="#" class="expand-button">₱120</a>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="image-box">
+                        <img src="Food/Pasta/FIVE CHEESE VODKA LASAGNA.jpg" alt="Pasta Item 4">
+                        <div class="overlay">
+                            <p class="hidden-text">Lasagna made with love.</p>
+                            <a href="#" class="expand-button">₱145</a>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="Food/Pasta/Garlic butter pasta.jpg" alt="Pasta Item 5">
+                        <div class="overlay">
+                            <p class="hidden-text">Garlic Pasta primavera with fresh vegetables.</p>
+                            <a href="#" class="expand-button">₱125</a>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="Food/Pasta/philly cheesestake pasta.jpg" alt="Pasta Item 6">
+                        <div class="overlay">
+                            <p class="hidden-text">Stuffed with Chesse and Steak.</p>
+                            <a href="#" class="expand-button">₱135</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Our Café</p>
+    </footer>
+
+    <!-- JavaScript for menu -->
+    <script>
+        function changeContent(contentType) {
+            const contentSections = document.querySelectorAll('.content-box');
+            contentSections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            const introText = document.getElementById('coffee-intro');
+            if (contentType === 'coffee') {
+                introText.style.display = 'block'; // Show intro text for coffee
+            } else {
+                introText.style.display = 'none'; // Hide intro text for other sections
+            }
+
+            const selectedContent = document.getElementById(contentType + '-content');
+            if (selectedContent) {
+                selectedContent.style.display = 'block';
+            }
+        }
+
+        window.onload = function() {
+            changeContent('coffee');
+        }
+    </script>
+</body>
+</html>
